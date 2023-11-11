@@ -55,12 +55,12 @@ export class BinaryMinHeap<T> {
     let currentIndex = 0;
 
     while (this.#hasLeftChild(currentIndex)) {
-      const smallerChildIndex = this.#getSmallerChildIndex(currentIndex);
+      const priorityHigherChildIndex = this.#getPriorityHigherChildIndex(currentIndex);
 
-      if (this.#isPriorityHigher(currentIndex, smallerChildIndex)) break;
+      if (this.#isPriorityHigher(currentIndex, priorityHigherChildIndex)) break;
 
-      this.#swap(currentIndex, smallerChildIndex);
-      currentIndex = smallerChildIndex;
+      this.#swap(currentIndex, priorityHigherChildIndex);
+      currentIndex = priorityHigherChildIndex;
     }
   }
 
@@ -68,7 +68,7 @@ export class BinaryMinHeap<T> {
     return this.#getLeftChildIndex(index) < this.size;
   }
 
-  #getSmallerChildIndex(index: number): number {
+  #getPriorityHigherChildIndex(index: number): number {
     const leftChildIndex = this.#getLeftChildIndex(index);
     const rightChildIndex = leftChildIndex + 1;
 
