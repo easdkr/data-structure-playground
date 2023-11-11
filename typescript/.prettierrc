@@ -1,15 +1,15 @@
 {
-    "singleQuote": true,
-    "trailingComma": "all",
-    "printWidth": 140,
-    "arrowParens": "always",
-    "tabWidth": 2,
-    "overrides": [
-      {
-        "files": ["*.ts", "*.mts"],
-        "options": {
-          "parser": "typescript"
-        }
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 120,
+  "arrowParens": "always",
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ["*.ts", "*.mts"],
+      "options": {
+        "parser": "typescript"
       }
-    ]
-  }
+    }
+  ]
+}
